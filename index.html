@@ -10,31 +10,34 @@
   <!-- Loading Screen -->
   <div id="loading">
     <div class="matrix">
-      010101101010010101010101
+      0101011010101010101010101010
     </div>
   </div>
 
-  <!-- Welcome Banner -->
-  <div class="banner">
+  <!-- Header -->
+  <header>
     <h1 class="glow">Hack the Future</h1>
     <p class="tagline">"Breaking the limits, one line at a time"</p>
-  </div>
-
-  <!-- Profile Section -->
-  <div class="profile">
-    <img src="profile.jpg" alt="Ghost-IN-Coder" class="profile-img">
-    <p class="typing-text">Hi, I am Ghost-IN-Coder. A glitch in the system, coding the future.</p>
-  </div>
+  </header>
 
   <!-- Navigation -->
-  <div class="nav">
+  <nav class="nav">
     <a href="#projects">Projects</a>
+    <a href="#challenges">Challenges</a>
+    <a href="#about">About</a>
     <a href="#contact">Contact</a>
-    <a id="easter-egg" onclick="revealSecret()">Hidden</a>
-  </div>
+  </nav>
+
+  <!-- Profile Section -->
+  <section id="about">
+    <div class="profile">
+      <img src="profile.jpg" alt="Ghost-IN-Coder" class="profile-img">
+      <p class="typing-text">Hi, I am Ghost-IN-Coder. A glitch in the system, coding the future.</p>
+    </div>
+  </section>
 
   <!-- Projects Section -->
-  <div id="projects" class="projects">
+  <section id="projects">
     <h2>Projects</h2>
     <div class="project-card">
       <h3>Project: Build an OS</h3>
@@ -46,24 +49,35 @@
       <p>A conversational AI designed to assist in real-time programming.</p>
       <button>Learn More</button>
     </div>
-  </div>
+  </section>
+
+  <!-- Challenges Section -->
+  <section id="challenges">
+    <h2>Coding Challenges</h2>
+    <div class="challenge">
+      <h3>Challenge 1: Reverse a String</h3>
+      <p>Write a function to reverse a given string.</p>
+      <button>Submit Solution</button>
+    </div>
+    <div class="challenge">
+      <h3>Challenge 2: Fibonacci Numbers</h3>
+      <p>Generate the first N Fibonacci numbers.</p>
+      <button>Submit Solution</button>
+    </div>
+  </section>
 
   <!-- Contact Section -->
-  <div id="contact" class="terminal">
-    <p>Enter your message:</p>
-    <textarea placeholder="Type here..." rows="5"></textarea>
+  <section id="contact" class="terminal">
+    <h2>Contact</h2>
+    <p>Send me a message:</p>
+    <textarea placeholder="Type your message here..." rows="5"></textarea>
     <button>Send</button>
-  </div>
+  </section>
 
   <!-- Footer -->
   <footer>
     &copy; 2025 Ghost-IN-Coder. Built with 💻 in the shadows.
   </footer>
-
-  <!-- Secret Message -->
-  <div id="secret" style="display: none; text-align: center; margin-top: 20px;">
-    <p>"You've unlocked the hidden path. Welcome to the code within."</p>
-  </div>
 
   <script>
     // Typing Effect
@@ -76,11 +90,6 @@
         i++;
         setTimeout(typeEffect, 50);
       }
-    }
-
-    // Reveal Secret Message
-    function revealSecret() {
-      document.getElementById('secret').style.display = 'block';
     }
 
     // Hide Loading Screen
