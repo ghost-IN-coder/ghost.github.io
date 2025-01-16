@@ -44,13 +44,6 @@ header {
   font-size: 3rem;
   color: #00ff00;
   text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
-  animation: glitch 2s infinite;
-}
-
-@keyframes glitch {
-  0% { text-shadow: 0 0 5px #00ff00; }
-  50% { text-shadow: 0 0 20px #00ff00; }
-  100% { text-shadow: 0 0 5px #00ff00; }
 }
 
 /* Navigation */
@@ -67,25 +60,50 @@ header {
   font-size: 1.2rem;
 }
 
+/* Profile Section */
+.profile-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.profile-card {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border: 2px solid #00ff00;
+  text-align: center;
+  max-width: 400px;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
 /* Projects Section */
-.project-card img {
-  width: 100%;
-  border-radius: 10px;
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
 }
 
 .project-card {
+  background: rgba(0, 0, 0, 0.8);
   border: 2px solid #00ff00;
-  background: rgba(0, 0, 0, 0.7);
-  margin: 20px auto;
   padding: 15px;
   text-align: center;
-  max-width: 400px;
-  transition: transform 0.3s;
 }
 
-.project-card:hover {
-  transform: scale(1.05);
-  background: rgba(0, 0, 0, 0.9);
+.project-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 /* Neon Buttons */
