@@ -7,6 +7,7 @@
 
 /* Body */
 body {
+  background: url('matrix-gif.gif') no-repeat center center fixed;
   background: #000;
   color: #00ff00;
   font-family: 'Courier New', monospace;
