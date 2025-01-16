@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ghost-IN-Coder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Glowing Title -->
+  <div class="header">
+    <h1 class="glow">Ghost-IN-Coder</h1>
+    <p class="tagline">"The system fears what it cannot see"</p>
+  </div>
+
+  <!-- Profile Section -->
+  <div class="profile">
+    <img src="profile.jpg" alt="Ghost Profile" class="profile-img">
+    <p class="typing-text">Hi, I am Ghost-IN-Coder. A glitch in the system, coding the future.</p>
+  </div>
+
+  <!-- Navigation -->
+  <div class="nav">
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Ghost-IN-Coder. Built with 💻 in the shadows.
+  </footer>
+
+  <script>
+    // Typing Effect
+    const text = "Hi, I am Ghost-IN-Coder. A glitch in the system, coding the future.";
+    let i = 0;
+    const typingElement = document.querySelector(".typing-text");
+    function typeEffect() {
+      if (i < text.length) {
+        typingElement.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeEffect, 50);
+      }
+    }
+    window.onload = typeEffect;
+  </script>
+</body>
+</html>
