@@ -86,3 +86,136 @@ section {
   margin-bottom: 20px;
   text-shadow: 0 0 10px #00ff00;
 }
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  background: #000;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  overflow-x: hidden;
+}
+
+/* Title Bar */
+.title-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #111;
+  color: #00ff00;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.title-bar h1 {
+  font-family: 'Hackdaddy', monospace;
+  font-size: 1.5rem;
+}
+
+.nav a {
+  margin: 0 15px;
+  color: #00ff00;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.nav a:hover {
+  text-shadow: 0 0 10px #00ff00;
+}
+
+/* Sections */
+section {
+  padding: 80px 20px 20px;
+  margin-top: 70px;
+}
+
+.section-title {
+  font-family: 'Hackdaddy', monospace;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+}
+
+/* About Section */
+.profile-card {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border: 2px solid #00ff00;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: #00ff00;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.social-links a:hover {
+  text-shadow: 0 0 10px #00ff00;
+}
+
+/* Projects Section */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid #00ff00;
+  padding: 15px;
+  text-align: center;
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Neon Buttons */
+.neon-btn {
+  background: transparent;
+  color: #00ff00;
+  padding: 10px 20px;
+  border: 2px solid #00ff00;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s;
+}
+
+.neon-btn:hover {
+  background: #00ff00;
+  color: black;
+  box-shadow: 0 0 10px #00ff00;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #111;
+  color: #00ff00;
+}
+
