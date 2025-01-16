@@ -3,33 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ghost-IN-Coder</title>
+  <title>Hack the Future</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Glowing Title -->
-  <div class="header">
-    <h1 class="glow">Ghost-IN-Coder</h1>
-    <p class="tagline">"The system fears what it cannot see"</p>
+  <!-- Loading Screen -->
+  <div id="loading">
+    <div class="matrix">
+      010101101010010101010101
+    </div>
+  </div>
+
+  <!-- Welcome Banner -->
+  <div class="banner">
+    <h1 class="glow">Hack the Future</h1>
+    <p class="tagline">"Breaking the limits, one line at a time"</p>
   </div>
 
   <!-- Profile Section -->
   <div class="profile">
-    <img src="profile.jpg" alt="Ghost Profile" class="profile-img">
+    <img src="profile.jpg" alt="Ghost-IN-Coder" class="profile-img">
     <p class="typing-text">Hi, I am Ghost-IN-Coder. A glitch in the system, coding the future.</p>
   </div>
 
   <!-- Navigation -->
   <div class="nav">
     <a href="#projects">Projects</a>
-    <a href="#about">About</a>
     <a href="#contact">Contact</a>
+    <a id="easter-egg" onclick="revealSecret()">Hidden</a>
+  </div>
+
+  <!-- Projects Section -->
+  <div id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>Project: Build an OS</h3>
+      <p>A lightweight operating system designed for coders.</p>
+      <button>Learn More</button>
+    </div>
+    <div class="project-card">
+      <h3>Project: AI Bot</h3>
+      <p>A conversational AI designed to assist in real-time programming.</p>
+      <button>Learn More</button>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div id="contact" class="terminal">
+    <p>Enter your message:</p>
+    <textarea placeholder="Type here..." rows="5"></textarea>
+    <button>Send</button>
   </div>
 
   <!-- Footer -->
   <footer>
     &copy; 2025 Ghost-IN-Coder. Built with 💻 in the shadows.
   </footer>
+
+  <!-- Secret Message -->
+  <div id="secret" style="display: none; text-align: center; margin-top: 20px;">
+    <p>"You've unlocked the hidden path. Welcome to the code within."</p>
+  </div>
 
   <script>
     // Typing Effect
@@ -43,7 +77,17 @@
         setTimeout(typeEffect, 50);
       }
     }
-    window.onload = typeEffect;
+
+    // Reveal Secret Message
+    function revealSecret() {
+      document.getElementById('secret').style.display = 'block';
+    }
+
+    // Hide Loading Screen
+    window.onload = function () {
+      document.getElementById('loading').style.display = 'none';
+      typeEffect();
+    };
   </script>
 </body>
 </html>
