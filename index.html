@@ -9,14 +9,15 @@
 <body>
   <!-- Loading Screen -->
   <div id="loading">
-    <div class="matrix">0101011010101010101010101010</div>
+    <p class="loading-text">Initializing...</p>
+    <p id="loading-percentage">0%</p>
   </div>
 
   <!-- Header -->
   <header>
     <div class="header-content">
       <h1 class="glow">Hack the Future</h1>
-      <p class="animated-tagline">"Rewriting reality, one line of code at a time."</p>
+      <p class="tagline">"Breaking systems, building futures."</p>
     </div>
   </header>
 
@@ -28,67 +29,51 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- Profile Section -->
-  <section id="about" class="profile-section">
-    <div class="profile-card">
-      <img src="profile.jpg" alt="Ghost-IN-Coder" class="profile-img">
-      <div class="profile-info">
-        <p class="typing-text">Hi, I am Ghost-IN-Coder. A glitch in the system, coding the future.</p>
-      </div>
-    </div>
+  <!-- About Section -->
+  <section id="about" class="terminal-section">
+    <h2>>_ About Me</h2>
+    <p class="typing-text">Hi, I'm Ghost-IN-Coder. A glitch in the system, crafting the future of tech.</p>
   </section>
 
   <!-- Projects Section -->
   <section id="projects">
-    <h2>Projects</h2>
+    <h2>>_ Projects</h2>
     <div class="project-card">
       <h3>Build an OS</h3>
-      <p>A lightweight operating system designed for coders.</p>
-      <img src="os-gif.gif" alt="Build an OS">
-      <button>Learn More</button>
+      <p>A lightweight operating system for developers.</p>
+      <button class="neon-btn">Explore</button>
     </div>
     <div class="project-card">
       <h3>AI Assistant</h3>
-      <p>A conversational AI designed to assist programmers in real-time.</p>
-      <img src="ai-gif.gif" alt="AI Assistant">
-      <button>Learn More</button>
+      <p>A conversational AI designed for real-time coding help.</p>
+      <button class="neon-btn">Explore</button>
     </div>
   </section>
 
   <!-- Challenges Section -->
-  <section id="challenges">
-    <h2>Coding Challenges</h2>
-    <div class="challenge">
-      <h3>Reverse a String</h3>
-      <p>Write a function to reverse a string.</p>
-      <button>Submit Solution</button>
-    </div>
-    <div class="challenge">
-      <h3>Fibonacci Numbers</h3>
-      <p>Generate the first N Fibonacci numbers.</p>
-      <button>Submit Solution</button>
-    </div>
+  <section id="challenges" class="terminal-section">
+    <h2>>_ Challenges</h2>
+    <p class="challenge">Challenge 1: Reverse a String</p>
+    <p class="challenge">Challenge 2: Fibonacci Numbers</p>
+    <button class="neon-btn">Submit Solution</button>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="terminal">
-      <p>Send me a message:</p>
-      <textarea placeholder="Type your message here..." rows="5"></textarea>
-      <button>Send</button>
-    </div>
+  <section id="contact" class="terminal-section">
+    <h2>>_ Contact</h2>
+    <textarea placeholder="Type your message..." rows="5"></textarea>
+    <button class="neon-btn">Send</button>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Ghost-IN-Coder. Built with 💻 in the shadows.</p>
+    <p>&copy; 2025 Ghost-IN-Coder. Made in the shadows.</p>
   </footer>
 
-  <!-- Scripts -->
+  <!-- Script -->
   <script>
     // Typing Effect
-    const text = "Hi, I am Ghost-IN-Coder. A glitch in the system, coding the future.";
+    const text = "Hi, I'm Ghost-IN-Coder. A glitch in the system, crafting the future of tech.";
     let i = 0;
     const typingElement = document.querySelector(".typing-text");
     function typeEffect() {
@@ -99,11 +84,21 @@
       }
     }
 
-    // Hide Loading Screen
-    window.onload = function () {
-      document.getElementById('loading').style.display = 'none';
-      typeEffect();
-    };
+    // Loading Screen
+    let load = 0;
+    const loadingScreen = document.getElementById('loading');
+    const loadingPercentage = document.getElementById('loading-percentage');
+    function updateLoading() {
+      if (load < 100) {
+        load++;
+        loadingPercentage.textContent = `${load}%`;
+        setTimeout(updateLoading, 30);
+      } else {
+        loadingScreen.style.display = 'none';
+        typeEffect();
+      }
+    }
+    window.onload = updateLoading;
   </script>
 </body>
 </html>
