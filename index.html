@@ -9,15 +9,15 @@
 <body>
   <!-- Loading Screen -->
   <div id="loading">
-    <p class="loading-text">Initializing...</p>
+    <div class="matrix">Initializing...</div>
     <p id="loading-percentage">0%</p>
   </div>
 
   <!-- Header -->
   <header>
     <div class="header-content">
-      <h1 class="glow">Hack the Future</h1>
-      <p class="tagline">"Breaking systems, building futures."</p>
+      <h1 class="glitch">Hack the Future</h1>
+      <p class="animated-tagline">"Decoding tomorrow, one byte at a time."</p>
     </div>
   </header>
 
@@ -30,37 +30,50 @@
   </nav>
 
   <!-- About Section -->
-  <section id="about" class="terminal-section">
-    <h2>>_ About Me</h2>
-    <p class="typing-text">Hi, I'm Ghost-IN-Coder. A glitch in the system, crafting the future of tech.</p>
+  <section id="about" class="profile-section">
+    <div class="profile-card">
+      <img src="profile.jpg" alt="Ghost-IN-Coder" class="profile-img">
+      <div class="profile-info">
+        <p class="typing-text">Hi, I am Ghost-IN-Coder. A glitch in the system, crafting tomorrow's tech.</p>
+      </div>
+    </div>
   </section>
 
   <!-- Projects Section -->
   <section id="projects">
-    <h2>>_ Projects</h2>
+    <h2 class="section-title glitch">Projects</h2>
     <div class="project-card">
       <h3>Build an OS</h3>
+      <img src="os-gif.gif" alt="OS Project">
       <p>A lightweight operating system for developers.</p>
       <button class="neon-btn">Explore</button>
     </div>
     <div class="project-card">
       <h3>AI Assistant</h3>
-      <p>A conversational AI designed for real-time coding help.</p>
+      <img src="ai-gif.gif" alt="AI Assistant">
+      <p>A conversational AI for real-time coding help.</p>
       <button class="neon-btn">Explore</button>
     </div>
   </section>
 
   <!-- Challenges Section -->
-  <section id="challenges" class="terminal-section">
-    <h2>>_ Challenges</h2>
-    <p class="challenge">Challenge 1: Reverse a String</p>
-    <p class="challenge">Challenge 2: Fibonacci Numbers</p>
-    <button class="neon-btn">Submit Solution</button>
+  <section id="challenges">
+    <h2 class="section-title glitch">Challenges</h2>
+    <div class="challenge">
+      <h3>Reverse a String</h3>
+      <p>Write a function to reverse a string.</p>
+      <button class="neon-btn">Submit Solution</button>
+    </div>
+    <div class="challenge">
+      <h3>Fibonacci Numbers</h3>
+      <p>Generate the first N Fibonacci numbers.</p>
+      <button class="neon-btn">Submit Solution</button>
+    </div>
   </section>
 
   <!-- Contact Section -->
   <section id="contact" class="terminal-section">
-    <h2>>_ Contact</h2>
+    <h2 class="section-title glitch">Contact</h2>
     <textarea placeholder="Type your message..." rows="5"></textarea>
     <button class="neon-btn">Send</button>
   </section>
@@ -70,10 +83,10 @@
     <p>&copy; 2025 Ghost-IN-Coder. Made in the shadows.</p>
   </footer>
 
-  <!-- Script -->
+  <!-- Scripts -->
   <script>
     // Typing Effect
-    const text = "Hi, I'm Ghost-IN-Coder. A glitch in the system, crafting the future of tech.";
+    const text = "Hi, I am Ghost-IN-Coder. A glitch in the system, crafting tomorrow's tech.";
     let i = 0;
     const typingElement = document.querySelector(".typing-text");
     function typeEffect() {
