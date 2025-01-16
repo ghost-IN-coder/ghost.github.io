@@ -1,5 +1,14 @@
 /* General Reset */
 /* Loading Screen */
+/* Body */
+body {
+  background: url('matrix-bg.gif') no-repeat center center fixed;
+  background-size: cover;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  overflow-x: hidden;
+}
+/* Loading Screen */
 #loading {
   position: fixed;
   top: 0;
@@ -40,14 +49,7 @@
   box-sizing: border-box;
 }
 
-/* Body */
-body {
-  background: url('matrix-bg.gif') no-repeat center center fixed;
-  background-size: cover;
-  color: #00ff00;
-  font-family: 'Courier New', monospace;
-  overflow-x: hidden;
-}
+
 
 
 /* Title Bar */
