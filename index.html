@@ -5,10 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hack the Future</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.cdnfonts.com/css/hackdaddy" rel="stylesheet">
 </head>
 <body>
-  <!-- Persistent Title Bar -->
+  <!-- Loading Screen -->
+  <div id="loading">
+    <div class="loading-text">Initializing...</div>
+    <div class="loading-bar">
+      <div class="loading-progress"></div>
+    </div>
+  </div>
+
+  <!-- Title Bar -->
   <header class="title-bar">
     <h1>Hack the Future</h1>
     <nav class="nav">
@@ -19,78 +26,40 @@
     </nav>
   </header>
 
-<!-- About Section -->
-<section id="about" class="profile-section">
-  <h2 class="section-title">About Me</h2>
-  <div class="profile-card">
-    <img src="profile.jpg" alt="Ghost-IN-Coder" class="profile-img">
-    <div class="profile-info">
-      <p class="typing-text">
-        Hi, I'm Ghost-IN-Coder. A digital phantom breaking systems and crafting futures.<br>
-        I love diving into code, exploring cybersecurity, and building things that the system fears.
-      </p>
-      <div class="social-links">
-        <a href="https://instagram.com/" target="_blank">
-          <img src="instagram-icon.png" alt="Instagram">
-        </a>
-        <a href="https://twitter.com/" target="_blank">
-          <img src="twitter-icon.png" alt="Twitter">
-        </a>
-        <a href="https://github.com/" target="_blank">
-          <img src="github-icon.png" alt="GitHub">
-        </a>
-        <a href="https://replit.com/" target="_blank">
-          <img src="replit-icon.png" alt="Replit">
-        </a>
-        <a href="https://discord.com/" target="_blank">
-          <img src="discord-icon.png" alt="Discord">
-        </a>
+  <!-- Content Sections -->
+  <main>
+    <section id="about" class="profile-section">
+      <h2 class="section-title">About Me</h2>
+      <div class="profile-card">
+        <img src="profile.jpg" alt="Ghost-IN-Coder" class="profile-img">
+        <div class="profile-info">
+          <p class="typing-text">
+            Hi, I'm Ghost-IN-Coder. A digital phantom breaking systems and crafting futures.<br>
+            I love diving into code, exploring cybersecurity, and building things that the system fears.
+          </p>
+          <div class="social-links">
+            <a href="https://instagram.com/" target="_blank">
+              <img src="instagram-icon.png" alt="Instagram">
+            </a>
+            <a href="https://twitter.com/" target="_blank">
+              <img src="twitter-icon.png" alt="Twitter">
+            </a>
+            <a href="https://github.com/" target="_blank">
+              <img src="github-icon.png" alt="GitHub">
+            </a>
+            <a href="https://replit.com/" target="_blank">
+              <img src="replit-icon.png" alt="Replit">
+            </a>
+            <a href="https://discord.com/" target="_blank">
+              <img src="discord-icon.png" alt="Discord">
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2 class="section-title">Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <img src="os-gif.gif" alt="OS Project" class="project-img">
-        <h3>Build an OS</h3>
-        <p>A lightweight operating system for developers.</p>
-        <button class="neon-btn">Explore</button>
-      </div>
-      <div class="project-card">
-        <img src="ai.gif" alt="AI Assistant" class="project-img">
-        <h3>AI Assistant</h3>
-        <p>A conversational AI for real-time coding help.</p>
-        <button class="neon-btn">Explore</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Challenges Section -->
-  <section id="challenges">
-    <h2 class="section-title">Challenges</h2>
-    <div class="challenge">
-      <h3>Reverse a String</h3>
-      <p>Write a function to reverse a string.</p>
-      <button class="neon-btn">Submit Solution</button>
-    </div>
-    <div class="challenge">
-      <h3>Fibonacci Numbers</h3>
-      <p>Generate the first N Fibonacci numbers.</p>
-      <button class="neon-btn">Submit Solution</button>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2 class="section-title">Contact</h2>
-    <textarea placeholder="Type your message..." rows="5"></textarea>
-    <button class="neon-btn">Send</button>
-  </section>
+    <!-- Other sections here -->
+  </main>
 
   <!-- Footer -->
   <footer>
@@ -110,7 +79,22 @@
         setTimeout(typeEffect, 50);
       }
     }
-    window.onload = typeEffect;
+
+    // Loading Screen
+    let load = 0;
+    const loadingScreen = document.getElementById('loading');
+    const progress = document.querySelector(".loading-progress");
+    function updateLoading() {
+      if (load < 100) {
+        load++;
+        progress.style.width = `${load}%`;
+        setTimeout(updateLoading, 30);
+      } else {
+        loadingScreen.style.display = 'none';
+        typeEffect();
+      }
+    }
+    window.onload = updateLoading;
   </script>
 </body>
 </html>
