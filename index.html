@@ -9,30 +9,32 @@
 <body>
   <!-- Loading Screen -->
   <div id="loading">
-    <div class="matrix">
-      0101011010101010101010101010
-    </div>
+    <div class="matrix">0101011010101010101010101010</div>
   </div>
 
   <!-- Header -->
   <header>
-    <h1 class="glow">Hack the Future</h1>
-    <p class="tagline">"Breaking the limits, one line at a time"</p>
+    <div class="header-content">
+      <h1 class="glow">Hack the Future</h1>
+      <p class="animated-tagline">"Rewriting reality, one line of code at a time."</p>
+    </div>
   </header>
 
   <!-- Navigation -->
   <nav class="nav">
+    <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#challenges">Challenges</a>
-    <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <!-- Profile Section -->
-  <section id="about">
-    <div class="profile">
+  <section id="about" class="profile-section">
+    <div class="profile-card">
       <img src="profile.jpg" alt="Ghost-IN-Coder" class="profile-img">
-      <p class="typing-text">Hi, I am Ghost-IN-Coder. A glitch in the system, coding the future.</p>
+      <div class="profile-info">
+        <p class="typing-text">Hi, I am Ghost-IN-Coder. A glitch in the system, coding the future.</p>
+      </div>
     </div>
   </section>
 
@@ -40,13 +42,15 @@
   <section id="projects">
     <h2>Projects</h2>
     <div class="project-card">
-      <h3>Project: Build an OS</h3>
+      <h3>Build an OS</h3>
       <p>A lightweight operating system designed for coders.</p>
+      <img src="os-gif.gif" alt="Build an OS">
       <button>Learn More</button>
     </div>
     <div class="project-card">
-      <h3>Project: AI Bot</h3>
-      <p>A conversational AI designed to assist in real-time programming.</p>
+      <h3>AI Assistant</h3>
+      <p>A conversational AI designed to assist programmers in real-time.</p>
+      <img src="ai-gif.gif" alt="AI Assistant">
       <button>Learn More</button>
     </div>
   </section>
@@ -55,30 +59,33 @@
   <section id="challenges">
     <h2>Coding Challenges</h2>
     <div class="challenge">
-      <h3>Challenge 1: Reverse a String</h3>
-      <p>Write a function to reverse a given string.</p>
+      <h3>Reverse a String</h3>
+      <p>Write a function to reverse a string.</p>
       <button>Submit Solution</button>
     </div>
     <div class="challenge">
-      <h3>Challenge 2: Fibonacci Numbers</h3>
+      <h3>Fibonacci Numbers</h3>
       <p>Generate the first N Fibonacci numbers.</p>
       <button>Submit Solution</button>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="terminal">
+  <section id="contact">
     <h2>Contact</h2>
-    <p>Send me a message:</p>
-    <textarea placeholder="Type your message here..." rows="5"></textarea>
-    <button>Send</button>
+    <div class="terminal">
+      <p>Send me a message:</p>
+      <textarea placeholder="Type your message here..." rows="5"></textarea>
+      <button>Send</button>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    &copy; 2025 Ghost-IN-Coder. Built with 💻 in the shadows.
+    <p>&copy; 2025 Ghost-IN-Coder. Built with 💻 in the shadows.</p>
   </footer>
 
+  <!-- Scripts -->
   <script>
     // Typing Effect
     const text = "Hi, I am Ghost-IN-Coder. A glitch in the system, coding the future.";
